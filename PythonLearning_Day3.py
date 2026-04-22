@@ -130,3 +130,12 @@ weight = 83.3433
 print(f"The weight is {weight:.2f} grams")
 
 print(f"{4*10}")
+
+#Docstring
+
+def square(n):
+    '''This method takes number and returns the square
+    '''
+    print(n**2)
+square(9)
+print(square.__doc__)
