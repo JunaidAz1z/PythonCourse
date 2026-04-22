@@ -167,3 +167,64 @@ c = 5
 d = 6
 isGreater(c,d)
 calculateMean(c,d)
+
+#Function Arguments
+
+#Not Require Args
+def avg(a=5, b= 8):
+    print("Average of number is ", (a + b)/2)
+
+avg()
+
+#Keyword Args
+def avg1(a=6, b=9):
+    print("Average of number is", (a+b)/2)
+
+avg1(a=9)
+
+def avg2(a=6, b=9):
+    print("Average of number is", (a+b)/2)
+
+avg2(9, 11)
+
+#Optional Args
+def avg3(a=6, b=9):
+    print("Average of number is", (a+b)/2)
+
+avg3(b=50)
+
+#Required Args
+def avg4(a, b, c=5):
+    print("Average of number is", (a+b+c)/3)
+
+avg4(a=3, b = 7)
+
+
+#Arbitrary Args
+
+def average(*numb):
+    sum = 0
+    for i in numb:
+        sum = sum + i
+        return sum / len(numb)
+
+av = average(3,4)
+print(av)
+
+def  sum11(*num):
+    sum = 0
+    for i in num:
+        sum = sum + i
+        print("Sum is : ", sum / len(num))
+
+sum11(1,2)
+
+def names(*name):
+    print("Hello",name[0], name[1])
+names("Jhon", "Peter")
+
+#Keyword Arbitrary 
+def name(**nam):
+    print("Hi", nam["fname"], nam["lname"])
+
+name(fname = "Peter", lname ="Jack")
