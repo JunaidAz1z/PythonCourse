@@ -86,31 +86,47 @@
 #Question ho fir options hon aur input lena 
 # answer aur correct or incorrect
 
-question1 = {"question":"What is the capital of Pakistan", "options": ["(a) Karachi", "(b) Lahore", "(c) Islamabad"], "answer":"c" }
-question2 = {"question":"Who is the PM of Pakistan", "options": ["(a) Ali", "(b) Peter", "(c) Jhon"], "answer":"a" }
-question3 = {"question":"When pakistan was made", "options": ["(a) 1945", "(b) 1946", "(c) 1947"], "answer":"c" }
-question4 = {"question":"How many province of Pakistan", "options": ["(a) 3", "(b) 4", "(c) 5"], "answer":"b" }
-question5 = {"question":"Pakistan Nationl sport", "options": ["(a) Cricket", "(b) Hockey", "(c) Football"], "answer":"b" }
+# question1 = {"question":"What is the capital of Pakistan", "options": ["(a) Karachi", "(b) Lahore", "(c) Islamabad"], "answer":"c" }
+# question2 = {"question":"Who is the PM of Pakistan", "options": ["(a) Ali", "(b) Peter", "(c) Jhon"], "answer":"a" }
+# question3 = {"question":"When pakistan was made", "options": ["(a) 1945", "(b) 1946", "(c) 1947"], "answer":"c" }
+# question4 = {"question":"How many province of Pakistan", "options": ["(a) 3", "(b) 4", "(c) 5"], "answer":"b" }
+# question5 = {"question":"Pakistan Nationl sport", "options": ["(a) Cricket", "(b) Hockey", "(c) Football"], "answer":"b" }
 
-allques = [
-    question1,
-    question2,
-    question3,
-    question4,
-    question5,
-]
-score = 0
-for i in allques:
-    print(i["question"])
-    for opt in i["options"]:
-        print(opt)
+# allques = [
+#     question1,
+#     question2,
+#     question3,
+#     question4,
+#     question5,
+# ]
+# score = 0
+# for i in allques:
+#     print(i["question"])
+#     for opt in i["options"]:
+#         print(opt)
    
-    ans = input("chosse the option : ")
-    if ans == i["answer"]:
-        score = score + 50
-        print("Your ans is correct and your score is :", score)
-    else:
-        score = score + 0
-        print("Incorrect your score is :", score)
-print("Game Over!!!")
-print("Your total score is ", score)
+#     ans = input("chosse the option : ")
+#     if ans == i["answer"]:
+#         score = score + 50
+#         print("Your ans is correct and your score is :", score)
+#     else:
+#         score = score + 0
+#         print("Incorrect your score is :", score)
+# print("Game Over!!!")
+# print("Your total score is ", score)
+
+
+#F-String
+
+sentence = "Hello my name is {0} and my age is {1}"
+name = "Peter"
+age = 21
+print(sentence.format(name, age))
+
+fstr = f"My name is {name} and my age is {age}"
+print(fstr)
+
+weight = 83.3433
+print(f"The weight is {weight:.2f} grams")
+
+print(f"{4*10}")
