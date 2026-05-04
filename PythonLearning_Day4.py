@@ -153,17 +153,31 @@ else:
 
 #Finlly works with function 
 
-def fun():
-    try:
-        li = [1, 3 , 5 , 5, 7 , 8 ,]
-        a = int(input("Enter index : "))
-        print(li[a])
-        return 1
-    except:
-        print("Invalid input!")
-        return 0
-    finally:
-        print("I'm always executed!")
+# def fun():
+#     try:
+#         li = [1, 3 , 5 , 5, 7 , 8 ,]
+#         a = int(input("Enter index : "))
+#         print(li[a])
+#         return 1
+#     except:
+#         print("Invalid input!")
+#         return 0
+#     finally:
+#         print("I'm always executed!")
 
-a = fun()
-print(a)
+# a = fun()
+# print(a)
+
+a = input("Enter a number between 5 and 9 !")
+if ( a == "quit"):
+    print("Stopped!")
+    exit()
+# else:
+#     raise TypeError("Invalid String")
+b = int(a)
+if(b<5 or b>9):
+    raise ValueError("Invalid value sssss!")
+else:
+    print(f"Your input is {a}")
+
+
