@@ -168,16 +168,85 @@ else:
 # a = fun()
 # print(a)
 
-a = input("Enter a number between 5 and 9 !")
-if ( a == "quit"):
-    print("Stopped!")
-    exit()
+# a = input("Enter a number between 5 and 9 !")
+# if ( a == "quit"):
+#     print("Stopped!")
+#     exit()
+# # else:
+# #     raise TypeError("Invalid String")
+# b = int(a)
+# if(b<5 or b>9):
+#     raise ValueError("Invalid value sssss!")
 # else:
-#     raise TypeError("Invalid String")
-b = int(a)
-if(b<5 or b>9):
-    raise ValueError("Invalid value sssss!")
-else:
-    print(f"Your input is {a}")
+#     print(f"Your input is {a}")
 
 
+# questions = [
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+ 
+   
+# ]
+
+# levels = [1000, 2000, 3000, 10000, 20000, 60000, 120000, 240000, 350000]
+# money = 0
+# for i in range(0, len(questions)):
+#     question = questions[i]
+#     print(f"Question for Rs. {levels[i]}")
+#     print(f"a. {question[1]}       b. {question[2]}")
+#     print(f"c. {question[3]}       d. {question[4]}")
+#     reply = int(input("Enter answer between (1 to 4) : "))
+#     if(reply == question[-1]):
+#         print(f"Correct answer you won Rs {levels[i]}")
+#         if(i == 4):
+#             money = 10000
+#         elif( i == 9):
+#             money = 350000
+#     else:
+#         print("Wrong answer!")
+#         break
+# print(f"Your take home money is {money}")   
+
+# questions = [
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+#     ["What language is used for making FB ? ", "Java", "Python", "React", "Php", None, 4],
+ 
+   
+# ]
+
+# levels = [10, 200, 300, 600, 1200, 2400, 4800, 9600, 19200]
+# money = 0
+
+# for i in range(0, len(questions)):
+#     question = questions[i]
+#     print(question[0])
+#     print(f"Question for Rs. {levels[i]}")
+#     print(f"a. {question[1] }       b. {question[2]}")
+#     print(f"c. {question[3]}        d. {question[4]}")
+#     reply = int(input("Enter answer between (1 to 4) : "))
+#     if (reply == question[-1]):
+#         print(f"Correct answer {levels[i]}")
+#         if (i == 3):
+#             money = 600
+#         elif(i == 6):
+#             money = 4800
+#         elif(i == 8):
+#             money = 19200
+#     else:
+#         print("Wrong answer!")
+#         break
+# print(f"Your total earned money is {money}")
