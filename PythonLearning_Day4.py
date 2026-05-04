@@ -250,3 +250,22 @@ else:
 #         print("Wrong answer!")
 #         break
 # print(f"Your total earned money is {money}")
+
+# import random
+# word = input("Enter word : ")
+# if (len(word) < 3):
+#     print(word[::-1])
+# else:
+#    mword = word[1:] + word[0]
+#    print("abc" + mword + "xyz")
+
+sentence = "Hello who is this"
+word = sentence.split()
+print(word)
+
+for i in range(len(word)):
+    if(len(word[i]) < 3):
+        print(word[i][::-1])
+    else:
+        mword = word[i][1:] + word[i][0]
+        print("abc" + mword + "xyz") 
