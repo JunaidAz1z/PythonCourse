@@ -75,4 +75,58 @@ import os
 # with open('textfile.txt', 'r') as f:
 #     print(f.read())
 
-print("Hello world")
+
+# square = lambda x: x*x
+# print(square(2))
+
+# cube = lambda x: x*x*x
+# print(cube(3))
+
+# sum = lambda x,y,z: x + y + z
+# print(sum(2,3,4))
+
+# avg = lambda x,y: (x + y) / 2
+# print(avg(7,5))
+
+# def fun(fx, val1, val2):
+#     return 2 * fx(val1,val2)
+# print(fun(lambda x,y: (x + y) / 2 ,44, 4))
+
+# def cube(x):
+#     return x*x*x
+
+# def filter_fun(x):
+#     return x>3
+
+# from functools import reduce
+# def red(x,y):
+#     return x + y
+
+# l = [2, 4, 5, 6]
+# newl = [] 
+# for i in l:
+#     newl.append(cube(i))
+
+# newl = list(map(cube, l))
+# print(newl)
+# newl = list(filter(filter_fun, l))
+# print(newl)
+
+# newl = reduce(lambda x,y: x * y , l)
+# print(newl)
+
+# a = [1, 2, 3]
+# b = [1, 2, 3]
+
+# a = 3
+# b = 3
+
+# a = "Peter"
+# b = "Peter"
+
+# a = (1, 4)
+# b = (1, 4)
+
+# print( a is b)
+# print(a == b)
+
