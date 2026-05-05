@@ -259,16 +259,19 @@ else:
 #    mword = word[1:] + word[0]
 #    print("abc" + mword + "xyz")
 
-# sentence = "Hello who is this"
-# word = sentence.split()
-# print(word)
+sentence = "Hello who is this"
+word = sentence.split()
+print(word)
 
-# for i in range(len(word)):
-#     if(len(word[i]) < 3):
-#         print(word[i][::-1])
-#     else:
-#         mword = word[i][1:] + word[i][0]
-#         print("abc" + mword + "xyz") 
+stnew = []
+
+for i in range(len(word)):
+    if(len(word[i]) >= 3):
+        mword = "abc" + word[i][1:] + word[i][0] + "def"
+        stnew.append(mword)
+        print(" ".join(stnew))
+    else:
+        print(word[i][::-1])
 
 a = 349
 b = 55
@@ -284,12 +287,23 @@ print(c)
 #         print("Awesome junaid")
 #     index +=1
 
-marks = [23, 45, 56, 76, 32]
-for index, mark in enumerate(marks):
-    print(mark)
-    if(index == 2):
-        print("Awesome Dear Uswa")
+# marks = [23, 45, 56, 76, 32]
+# for index, mark in enumerate(marks):
+#     print(mark)
+#     if(index == 2):
+#         print("Awesome Dear Uswa")
 
-fruits = ["apple", "bnana", "mango"]
-for index, fruit in enumerate(fruits):
-    print(index, fruit)
+# fruits = ["apple", "bnana", "mango"]
+# for index, fruit in enumerate(fruits):
+#     print(index, fruit)
+
+# from math import *
+# from math import sqrt, pi
+# from math import pi, sqrt as s
+# import math as m
+# from peter import welcome, peter
+# print(s(9))
+# print(sqrt(16) * pi)
+# print(m.sqrt(25))
+# welcome()
+# print(peter)
