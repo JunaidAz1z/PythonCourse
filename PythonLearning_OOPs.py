@@ -220,9 +220,32 @@ o1.showDetails()
 #same thing 
 # Emp.showDetails(o)
 
+                                    #Exercise 
+# import os 
 
+# folder = "pics"
+# files = os.listdir(folder)
+# count = 1
+# for file in files:
+#     old = os.path.join(folder,file)
+#     new = os.path.join(folder, f"{count}.jpg")
+#     os.rename(old, new)
+#     count +=1
 
+class Employee:
+    company = "Apple"
+    def show(self):
+        print(f"name is {self.name} and company is {self.company}")
+    @classmethod
+    def newCompany(cls, newComp):
+        cls.company = newComp
 
+e = Employee()
+e.name = "Peter"
+e.show()
+e.newCompany("Tesla")
+e.show()
+print(Employee.company)
 
 
 
