@@ -131,3 +131,70 @@ ob3.department("IT")
 ob2 = Salary(104, "Junaid")
 print(f"The employee id is {ob2.id} and name is {ob2.name} and other details shown below")
 ob2.section(100000, 150000)
+
+
+class Student:
+    def __init__(self):
+        self.__name = "Kim"
+
+ob = Student()
+print(ob._Student__name)
+
+class Teacher:
+    def __init__(self):
+        self._name = "Harry"
+
+ob1 = Teacher()
+print(ob1._name)
+
+class Library:
+    def __init__(self, no_books=0, books=[]):
+        self.no_books = no_books
+        self.books = books
+
+    def addBook(self,book):
+        self.no_books += 1
+        self.books.append(book)
+        print(self.books)
+        print(f"No of Books {self.no_books}")
+        
+    def check(self):
+        if(len(self.books) == self.no_books):
+            print("Length is same!")
+        else:
+            print("Something wrong with programm")
+ob = Library()
+ob.addBook("Math")
+ob.addBook("Computer")
+ob.check()
+
+
+
+# class Students:
+#     def __init__(self, count=0, std=[]):
+#         self.co = count
+#         self.st = std
+        
+#     def addStudent(self,sname):
+#         self.co += 1
+#         self.st.append(sname)
+#         print(self.st)
+
+# oo = Students()
+# oo.addStudent("Jhon")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
