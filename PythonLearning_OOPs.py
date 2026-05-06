@@ -157,7 +157,7 @@ class Library:
         self.books.append(book)
         print(self.books)
         print(f"No of Books {self.no_books}")
-        
+
     def check(self):
         if(len(self.books) == self.no_books):
             print("Length is same!")
@@ -183,7 +183,42 @@ ob.check()
 # oo = Students()
 # oo.addStudent("Jhon")
 
+class Math:
+    def __init__(self, num):
+        self.num = num
+    
+    def addtoNum(self, n):
+        self.num = self.num + n
 
+    @staticmethod
+    def add(a, b):
+        return a + b
+a = Math(5)
+print(a.num)
+a.addtoNum(3)
+print(a.num)
+print(a.add(3, 5))
+
+
+#Instance and Class variables
+class Emp:
+    companyName = "Apple"
+    emp = 0
+    def __init__(self, name):
+        self.name = name
+        self.raise_amount = 0.02
+        Emp.emp += 1
+    def showDetails(self):
+        print(f"Name of employee is {self.name} and amount  raised {self.raise_amount} and the company size is {self.emp} and company name is {self.companyName}")
+
+o = Emp("Tom crooze")
+o.companyName = "Google"
+o.showDetails()
+o1 = Emp("Peter")
+Emp.companyName = "Samsung"
+o1.showDetails()
+#same thing 
+# Emp.showDetails(o)
 
 
 
