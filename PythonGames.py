@@ -17,7 +17,9 @@
 # else:
 #     print("Computer wins!")
 
-# 2nd Method 
+
+
+                              #2nd Method 
 # import random 
 
 # def game(u, c):
