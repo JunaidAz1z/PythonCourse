@@ -50,3 +50,84 @@ def hello():
     print("Hello world!")
 
 hello()
+
+class MyClass:
+    def __init__(self, value):
+        self._value = value
+
+    def show(self):
+        print(f"Value is {self._value}")
+    
+    @property
+    def ten_value(self):
+       return 10 * self._value
+    
+    @ten_value.setter
+    def ten_value(self, new_val):
+       self._value = new_val/5
+       
+    
+obj = MyClass(5)
+obj.ten_value = 100
+obj.show()
+print(obj.ten_value)
+
+class Car:
+    def __init__(self, mod):
+        self.model = mod
+    
+    def show(self):
+        print(f"Model of car is {self.model}")
+
+    @property
+    def car_model(self):
+        return 5 + self.model
+    
+    @car_model.setter
+    def car_model(self, new_model):
+        self.model = new_model-2
+
+obj1 = Car(2005)
+obj1.car_model = 2008
+print(obj1.car_model)
+obj1.show()
+
+
+class Employee:
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+    
+    def showDetails(self):
+        print(f"{self.id} is the id of {self.name}")
+
+
+
+class Programmer(Employee):
+    def language(self):
+        print(f"Default language is Python")
+
+class Manager(Employee):
+    def department(self, dep):
+        self.dept = dep
+        print(f"He is a manager in {self.dept} Department")
+
+class Salary(Programmer):
+    def section(self, fd, bd):
+        self.front = fd
+        self.back = bd
+        print(f"salary of front end developer is {self.front}")
+        print(f"salary of Back end developer is {self.back}")
+
+
+
+ob = Employee(101, 'Peter')
+ob.showDetails()
+ob1 = Programmer(102, 'Sani')
+ob1.showDetails()
+ob1.language()
+ob3 = Manager(103, "Tom")
+ob3.department("IT")
+ob2 = Salary(104, "Junaid")
+print(f"The employee id is {ob2.id} and name is {ob2.name} and other details shown below")
+ob2.section(100000, 150000)
