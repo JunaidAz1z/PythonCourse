@@ -222,15 +222,27 @@ o1.showDetails()
 
                                     #Exercise 
 # import os 
-
-# folder = "pics"
-# files = os.listdir(folder)
+# files = os.listdir("pics")
 # count = 1
 # for file in files:
-#     old = os.path.join(folder,file)
-#     new = os.path.join(folder, f"{count}.jpg")
-#     os.rename(old, new)
-#     count +=1
+#     if file.endswith(".jpg"):
+#         old = os.path.join("pics",file)
+#         new = os.path.join("pics", f"{count}.jpg")
+#         os.rename(old, new)
+#         count = count + 1
+
+
+# import os 
+
+# files = os.listdir("pics")
+# count = 4
+# for file in files:
+#     if file.endswith(".jpg"):
+#         print(file)
+#         os.rename(f"pics/{file}", f"pics/{count}.jpg")
+#         count = count + 1
+#         print(file)
+
 
 class Employee:
     company = "Apple"
