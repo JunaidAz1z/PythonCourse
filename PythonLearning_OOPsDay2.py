@@ -67,14 +67,6 @@ print(obj1.language)
         
                                         #Magic/Dunder Methods in Python
 
-from emp import Employee
-
-e = Employee("Harry")
-print(str(e))
-print(repr(e))
-e()
-# print(len(e))
-
 
 #Call method aik object ko function ki tara behave karwata
 class Student:
@@ -157,3 +149,44 @@ class Circle(Shape):
         
 ob = Circle(5)
 print(ob.area())
+
+
+                                #Exercise Solution
+
+import os
+from pypdf import PdfWriter
+
+
+merger = PdfWriter()
+
+files = os.listdir("Pdf_files")
+
+for pdf in files:
+    merger.append(os.path.join("Pdf_files", pdf))
+
+merger.write("New1.pdf")
+
+#Operator Overloading
+
+#+ only numbers ke liye
+#+ vectors, strings, objects sab ke liye custom ban jata hai
+class Vector:
+    def __init__(self, i, j, k):
+        self.i = i
+        self.j = j
+        self.k = k
+
+    def __str__(self):
+        return f"{self.i}i + {self.j}j + {self.k}k"
+
+    def __add__(self, x):
+        return Vector(self.i + x.i, self.j + x.j, self.k + x.k)
+ob1 = Vector(3, 4, 5)
+print(ob1)
+
+ob2 = Vector(5, 2, 1)
+print(ob2)
+
+print(ob1 + ob2)
+
+
