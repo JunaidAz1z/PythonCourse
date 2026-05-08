@@ -58,3 +58,31 @@ import os
 # shutil.move("pictures/1.jpg", "1.jpg")
 # shutil.rmtree("pictures")
 # os.rmdir("pictures")
+
+# import requests
+
+# response = requests.get("https://www.google.com")
+# html = response.text
+# print(html)
+
+# from bs4 import BeautifulSoup
+# soup = BeautifulSoup(html, "html.parser")
+# print(soup.prettify())
+# for head in soup.find_all("h3"):
+#     print(head.text)
+
+
+# url = 'https://jsonplaceholder.typicode.com/posts'
+
+# data = {
+#     "title": 'foo',
+#     "body": 'bar',
+#     "userId": 3,
+ 
+# }
+# headers = {
+#     'Content-type': 'application/json; charset=UTF-8'
+#   }
+
+# response = requests.post(url, headers=headers, json=data)
+# print(response.json())
