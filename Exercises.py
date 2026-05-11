@@ -313,3 +313,130 @@ import random
 
 #Ex8
 
+# def gen_password(length=12):
+#     if length < 8 :
+#         print("Warning! Your password is weak.")
+#     length = 8
+
+#     lowercase = "abcdefghijklmnopqrstuvwxyz"
+#     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+#     numbers = "0123456789"
+#     special = "!@#$%^&*()_+-=[]{}|;:,.<>/?"
+
+#     all_character = lowercase + uppercase + numbers + special
+#     password = [
+#         random.choice(lowercase),
+#         random.choice(uppercase),
+#         random.choice(numbers),
+#         random.choice(special)
+#     ]
+#     for _ in range(length - 4):
+#         random.choice(password.append(all_character))
+
+#     random.shuffle(password),
+#     final_password = "".join(password)
+#     return final_password
+
+# if __name__ == "__main__":
+#     print("Generated Password:", gen_password(12))
+#     print("Generated Password:", gen_password(16))
+
+
+#Ex1
+
+# foods = ["chicken", "pizza", "burger", "kheer", "chicken pulao", "beef", "biryani", "bbq"]
+# foods.insert(1, "tiqqa kabab")
+# foods.append("nehari")
+# foods.remove("chicken")
+# foods.sort()
+# print(foods)
+
+#Ex2
+
+# students = []
+# for std in range(5):
+#     name = input("Enter new student in list : ")
+#     students.append(name)
+# for st in students:
+#     print(f"Name is {st} and letters in name {len(st)}")
+
+#Ex3
+
+# Ek dictionary banao jisme 4 students ka data ho (name, age, marks).
+# Phir saare students ka naam aur percentage print karo.
+
+# students = {
+#     "std101": {
+#         "name": "Ali Khan",
+#         "age": 20,
+#         "marks": 85
+#     },
+#     "std102": {
+#         "name": "Sara Ahmed",
+#         "age": 19,
+#         "marks": 92
+#     },
+#     "std103": {
+#         "name": "Usman Tariq",
+#         "age": 21,
+#         "marks": 78
+#     },
+#     "std104": {
+#         "name": "Fatima Noor",
+#         "age": 20,
+#         "marks": 88
+#     }
+# }
+
+# for j, i in students.items():
+#     name = i["name"]
+#     mark = i["marks"]
+#     percentage = (mark/100) * 100
+#     print(name)
+#     print(percentage)
+
+#Ex4
+
+# cart = []
+# total_bill = 0
+
+# for i in range(4):
+#     product_name = input("Enter name of product : ")
+#     price = int(input("Enter price of product : "))
+#     product = {
+#     "name": product_name,
+#     "price": price,
+# }
+#     cart.append(product)
+# for bill in cart:
+#     print(f"Product name: {bill["name"]} - Price: {bill["price"]}")
+#     items = len(cart)
+#     price = bill["price"]
+#     total_bill = total_bill + price
+# print(f"Total items : {items}")
+# print(f"Total bill : {total_bill}")
+
+#Ex5
+
+# Ek list banao [23, 45, 12, 67, 34, 89, 10]
+# Phir is list se:
+# Sabse chhota number
+# Sabse bara number
+# Total sum
+# Even numbers ki list
+# print karo.
+
+numbers = [34, 45, 65, 34, 23, 42, 435]
+sa = 0
+even = []
+print(numbers.pop(4))
+print(numbers.pop(-1))
+for s in numbers:
+    sa = sa + s
+    if s%2==0:
+        even.append(s)
+
+print(sa)
+print(even)
+
+print(numbers)
