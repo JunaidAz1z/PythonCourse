@@ -426,17 +426,238 @@ import random
 # Even numbers ki list
 # print karo.
 
-numbers = [34, 45, 65, 34, 23, 42, 435]
-sa = 0
-even = []
-print(numbers.pop(4))
-print(numbers.pop(-1))
-for s in numbers:
-    sa = sa + s
-    if s%2==0:
-        even.append(s)
+# numbers = [34, 45, 65, 34, 23, 42, 435]
+# sa = 0
+# even = []
+# print(numbers.pop(4))
+# print(numbers.pop(-1))
+# for s in numbers:
+#     sa = sa + s
+#     if s%2==0:
+#         even.append(s)
 
-print(sa)
-print(even)
+# print(sa)
+# print(even)
+# print(numbers)
 
-print(numbers)
+
+#Ex1 
+
+# with open("myinfo.txt", "w") as f:
+#     f.write("Peter, 23, Rwp, CS")
+
+#Ex2
+
+# with open("myinfo.txt", "r") as f:
+#     print(f.read())
+
+#Ex3
+
+# products = []
+# for i in range(4):
+#     name = input("Enter name of product: ")
+#     price = int(input("Enter price of product: "))
+#     product = {
+#         "name": name,
+#         "price": price
+#     }
+    
+#     products.append(product)
+
+# with open("bill.txt", 'w') as f:
+#     f.write("=== Shopping Bill ===\n\n")
+    
+#     total = 0
+#     for p in products:
+#         f.write(f"Product: {p['name']} - Price: {p['price']} Rs\n")
+#         total += p['price']
+    
+#     f.write("\n" + "-"*30 + "\n")
+#     f.write(f"Total Bill = {total} Rs")
+
+#Ex4
+
+# students = []
+# for i in range(3):
+#     name = input("Enter name of student : ")
+#     marks = int(input("Enter marks of student : "))
+#     details = {
+#           "name": name,
+#           "marks": marks
+#     }
+#     students.append(details)
+# print(students)
+# with open("student.txt", "w") as f:
+#       f.write(" === Students Details === \n\n")
+#       for s in students:  
+#             f.write(f"{s['name']} - {s['marks']}\n")
+        
+#Ex5
+
+# with open("student.txt", "r") as f:
+#     content = f.read()
+
+#     lines = content.splitlines()
+#     lines_count = len(lines)
+#     print(lines_count)
+
+#     word = content.split()
+#     word_count = len(word)
+#     print(word_count)
+
+#     longest_line = max(lines, key=len)
+#     longest_len = len(longest_line)
+#     print(longest_len)
+
+                                                    #OOP
+
+# Ek class Person banao jisme name aur age ho.
+# Method banao introduce() jo naam aur age print kare.
+
+#Ex1
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def introduce(self):
+#         print(f"Name is {self.name} and age is {self.age}")
+
+# obj = Person("Tom",23)
+# obj.introduce()
+
+#Ex2
+
+# class BankAccount:
+#     def __init__(self, account_holder, balance):
+#         self.account_holder = account_holder
+#         self.balance = balance
+
+#     def deposit(self, amount):
+#         self.amount = amount
+#         amount= int(input("Enter amount you want to deposit :"))
+#         self.balance = self.balance + amount
+#         print(f"Rs {amount} deposited successfully!")
+
+
+#     def withdraw(self, amount):
+#         self.amount = amount
+#         amount = int(input("Enter amount you want to withdraw :"))
+#         if amount > self.amount:
+#             print("Insufficent Balance!")
+#         else:
+#             self.balance = self.balance - amount
+#             print(f"Rs {amount} withdrawn successfully!")
+    
+#     def check_balance(self):
+#         print(self.account_holder)
+#         print(self.balance)
+
+# obj = BankAccount("ali",10000)
+# obj.check_balance() 
+# obj.deposit(5000)   
+# obj.check_balance() 
+# obj.withdraw(2000)
+# obj.check_balance()
+
+#Ex3
+
+# Class Student
+# Attributes: name, roll_no, marks (list)
+# Methods:
+# add_marks()
+# get_average()
+# get_grade()    
+
+# class Student:
+#     def __init__(self, name, roll_no):
+#         self.name = name
+#         self.roll_no = roll_no
+#         self.marks = []
+    
+#     def add_marks(self, subject_marks):
+#         self.marks.append(subject_marks)
+#         print(f"{subject_marks} marks added | Current Marks: {self.marks}")
+    
+#     def get_average(self):
+#         if len(self.marks) == 0:
+#             return 0
+#         total = sum(self.marks)
+#         avg = total / len(self.marks)
+#         return avg
+
+#     def get_grade(self):
+#         avg = self.get_average()          
+        
+#         if avg >= 90:
+#             return "A+"
+#         elif avg >= 80:
+#             return "A"
+#         elif avg >= 70:
+#             return "B"
+#         elif avg >= 60:
+#             return "C"
+#         else:
+#             return "Fail"
+
+    
+#     def show_result(self):
+#         avg = self.get_average()
+#         grade = self.get_grade()
+#         print("="*40)
+#         print(f"Student Name : {self.name}")
+#         print(f"Roll No      : {self.roll_no}")
+#         print(f"Marks        : {self.marks}")
+#         print(f"Average      : {avg:.2f}")
+#         print(f"Grade        : {grade}")
+#         print("="*40)
+
+
+
+# obj = Student("Tom", 899)
+
+# obj.add_marks(85)
+# obj.add_marks(78)
+# obj.add_marks(92)
+# obj.add_marks(65)
+
+# obj.show_result()
+
+#Ex4
+
+# Ek class Vehicle banao (brand, model)
+# Usse inherit karke Car aur Bike class banao with extra features.
+
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+class Car(Vehicle):
+    def __init__(self, brand, model, price):
+        self.price = price
+        super().__init__(brand, model)
+    def Car_Details(self):
+        print(f"{self.brand} and model is {self.model} and price is {self.price}")
+class Bike(Vehicle):
+    def __init__(self, brand, model, price, color):
+        self.price = price
+        self.color = color
+        super().__init__(brand, model)
+    def Bike_Details(self):
+        print(f"{self.brand} and model is {self.model} and price is {self.price} and the color is {self.color}")
+obj1 = Car("BMW","A600",34000000)
+obj1.Car_Details()
+ob = Bike("Honda", "CG125", "350000", "Black")
+ob.Bike_Details()
+
+
+
+# Exercise 5: Library Management System (Mini Project)
+
+# Class Book
+# Class Library
+# Methods: add book, issue book, return book, show available books
+
+
