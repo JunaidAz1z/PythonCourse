@@ -629,31 +629,77 @@ import random
 # Ek class Vehicle banao (brand, model)
 # Usse inherit karke Car aur Bike class banao with extra features.
 
-class Vehicle:
-    def __init__(self, brand, model):
-        self.brand = brand
-        self.model = model
+# class Vehicle:
+#     def __init__(self, brand, model):
+#         self.brand = brand
+#         self.model = model
 
-class Car(Vehicle):
-    def __init__(self, brand, model, price):
-        self.price = price
-        super().__init__(brand, model)
-    def Car_Details(self):
-        print(f"{self.brand} and model is {self.model} and price is {self.price}")
-class Bike(Vehicle):
-    def __init__(self, brand, model, price, color):
-        self.price = price
-        self.color = color
-        super().__init__(brand, model)
-    def Bike_Details(self):
-        print(f"{self.brand} and model is {self.model} and price is {self.price} and the color is {self.color}")
-obj1 = Car("BMW","A600",34000000)
-obj1.Car_Details()
-ob = Bike("Honda", "CG125", "350000", "Black")
-ob.Bike_Details()
+# class Car(Vehicle):
+#     def __init__(self, brand, model, price):
+#         self.price = price
+#         super().__init__(brand, model)
+#     def Car_Details(self):
+#         print(f"{self.brand} and model is {self.model} and price is {self.price}")
+# class Bike(Vehicle):
+#     def __init__(self, brand, model, price, color):
+#         self.price = price
+#         self.color = color
+#         super().__init__(brand, model)
+#     def Bike_Details(self):
+#         print(f"{self.brand} and model is {self.model} and price is {self.price} and the color is {self.color}")
+# obj1 = Car("BMW","A600",34000000)
+# obj1.Car_Details()
+# ob = Bike("Honda", "CG125", "350000", "Black")
+# ob.Bike_Details()
 
+#Ex5
 
+class Book:
+    def __init__(self, book_id, title, author):
+        self.book_id = book_id
+        self.title = title
+        self.author = author
+        self.status = "Available"      
+    def book_Details(self):
+        print(f"Id : {self.book_id}")
+        print(f"Name : {self.title}")
+        print(f"Author : {self.author}")
+        print(f"Status : {self.status}")
+        
 
+obj = Book(102,"Computer Science","Kim john")
+obj.book_Details()
+
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self,book_id,title, author):
+        self.book_id = book_id
+        self.title = title
+        self.author = author
+        new_book = Book(book_id, title, author)
+        self.books.append(new_book)
+        print(f"Book '{title}' added successfully!")
+    def show_available_books(self):
+        for book in self.books:
+            if book.status == "Available":
+                book.book_Details()
+    def issue_book(self, book_id):
+        for book in self.books:
+            if book.book_id == book_id:
+                if book.status == "Available":
+                    book.status == "Issued"
+                    print(f"Book {book.title} has been Issued")
+                else:
+                    print("This book is already issued!")
+                return
+        print("Book with this id not found")
+
+lib = Library()
+lib.add_book(101, "Python for Beginners", "Ahmed Ali")
+lib.add_book(102, "Rich Dad Poor Dad", "Robert Kiyosaki")
+lib.show_available_books()
 # Exercise 5: Library Management System (Mini Project)
 
 # Class Book
