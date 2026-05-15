@@ -654,6 +654,12 @@ import random
 
 #Ex5
 
+# Exercise 5: Library Management System (Mini Project)
+
+# Class Book
+# Class Library
+# Methods: add book, issue book, return book, show available books
+
 class Book:
     def __init__(self, book_id, title, author):
         self.book_id = book_id
@@ -674,10 +680,10 @@ class Library:
     def __init__(self):
         self.books = []
 
-    def add_book(self,book_id,title, author):
-        self.book_id = book_id
-        self.title = title
-        self.author = author
+    def add_book(self):
+        book_id = input("Enter Book ID: ")
+        title = input("Enter Book Title: ")
+        author = input("Enter Author Name: ")
         new_book = Book(book_id, title, author)
         self.books.append(new_book)
         print(f"Book '{title}' added successfully!")
@@ -685,25 +691,67 @@ class Library:
         for book in self.books:
             if book.status == "Available":
                 book.book_Details()
-    def issue_book(self, book_id):
+            else:
+                print("No books available")
+    def issue_book(self):
+        book_id = input("Enter Book ID: ")
         for book in self.books:
             if book.book_id == book_id:
                 if book.status == "Available":
-                    book.status == "Issued"
+                    book.status = "Issued"
                     print(f"Book {book.title} has been Issued")
                 else:
                     print("This book is already issued!")
                 return
         print("Book with this id not found")
+    
+    def return_book(self):
+        book_id = input("Enter Book ID: ")
+        for book in self.books:
+            if book.book_id == book_id:
+                if book.status == "Issued":
+                    book.status = "Available"
+                    print("Success")
+                else:
+                    print("Book is available")
+                return
+        print("Book with this ID not found in library!")
+    
+    def show_all_books(self):
+        print("\n=== All Books in Library ===")
+        if not self.books:
+            print("No books in library yet.")
+            return
+        for book in self.books:
+            book.book_Details()
+
+    def main_menu(self):
+        while True:
+            print("====== Library Management System ======")
+            print("1. Add New Book")
+            print("2. Show Available Books")
+            print("3. Issue Books")
+            print("4. Return Books")
+            print("5. Show All Books")
+            print("6. Exit")
+            choice = int(input("Enter Your Choice : "))
+            if choice == 1:
+                self.add_book()
+            elif choice == 2:
+                self.show_available_books()
+            elif choice == 3:
+                self.issue_book()
+            elif choice == 4:
+                self.return_book()
+            elif choice == 5:
+                self.show_all_books()
+            elif choice == 6:
+                print("Thank you for using library system")
+                break
+            else:
+                print("Invalid input!")
 
 lib = Library()
-lib.add_book(101, "Python for Beginners", "Ahmed Ali")
-lib.add_book(102, "Rich Dad Poor Dad", "Robert Kiyosaki")
-lib.show_available_books()
-# Exercise 5: Library Management System (Mini Project)
-
-# Class Book
-# Class Library
-# Methods: add book, issue book, return book, show available books
+lib.main_menu()
 
 
