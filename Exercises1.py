@@ -185,6 +185,153 @@ import json
 #     print(f"Graduation Year : {loaded_data['graduation_year']}")
 
 
+                                #Requests 
+
+#Ex1
+
+import requests
+
+# try:
+#     response = requests.get('https://jsonplaceholder.typicode.com/users')
+
+#     if response.status_code == 200:
+#         users = response.json()
+#         print(f"Successfully fetched {len(users)} users!")
+#         for user in users:
+#                     print(f"ID       : {user['id']}")
+#                     print(f"Name     : {user['name']}")
+#                     print(f"Username : {user['username']}")
+#                     print(f"Email    : {user['email']}")
+#                     print(f"City     : {user['address']['city']}")
+
+#     else:
+#         print("Failed to fetch data")
+
+# except requests.ConnectionError:
+#     print("No internet Connection")
+
+#Ex2
+
+# try:
+#     city = input("Enter city name!")
+#     response = requests.get(f"https://wttr.in/{city}?format=3")
+#     if response.status_code == 200:
+#         print(response.text)
+#     else:
+#         print("No city found with this name!")
+# except:
+#     print("No internet or some error occurred!")
+
+#Ex3
+
+# response = requests.get("https://randomuser.me/api/")
+# if response.status_code == 200:
+#     data = response.json()
+
+#     user = data['results'][0]      
+    
+#     first_name = user['name']['first']
+#     last_name = user['name']['last']
+#     email = user['email']
+#     city = user['location']['city']
+#     print(f"Name    : {first_name} {last_name}")
+#     print(f"Email   : {email}")
+#     print(f"City   : {city}")
+
+#Ex4
+
+# import requests 
+
+# def quote_generator():
+#     try:
+#         response = requests.get("https://api.quotable.io/random", timeout=10)
+#         if response.status_code == 200:
+#             data = response.json()
+#             quote = data['content']
+#             author = data['author']
+#             print(f"="*60)
+#             print(f"MOTIVATIONAL QUOTE".center(60))
+#             print(f"="*60)
+#             print(f'"{quote}"')
+#             print(f"- {author}")
+#             print(f"="*60)
+#         else:
+#             print("Failed to fetch code ")
+#     except ConnectionError:
+#         print("No Internet Connection! Please check your internet.")
+#     except Exception as e:
+#         print("Something went wrong", e)
+
+# quote_generator()
+    
+#Ex5
+
+# import requests
+
+# def search_products():
+#     try:
+#         query = input("Kya search karna chahte ho? (e.g. laptop, phone, watch): ").strip()
+        
+#         if not query:
+#             print("Please enter something to search!")
+#             return
+        
+#         url = f"https://dummyjson.com/products/search?q={query}"
+#         response = requests.get(url, timeout=10)
+#         if response.status_code == 200:
+#             data = response.json()
+#             products = data.get('products', [])
+#             if not products:
+#                 print("No results found for :", {query})
+#         print(f"\nFound {len(products)} results for '{query}'\n")
+#         for product in products:
+#             print(f"Title   : {product['title']}")
+#             print(f"Price   : {product['price']}")
+#             print(f"Rating  : {product['rating']}")
+#             print(f"Brand   : {product['brand']}")
+#             print(f"Category: {product['category']}")
+#         else:
+#             print(f"API ERROR :{response.status_code}")
+#     except ConnectionError:
+#         print("No internet Connection!")
+
+# search_products()
 
 
+                                    #Using Unsplash Images
+                            
+import requests
 
+def search_images():
+    query = input("Kya search karna chahte ho? (e.g. mountain, cat, car, nature): ").strip()
+    
+    if not query:
+        print("Please enter something to search!")
+        return
+    
+    # Unsplash ka simple random image search URL
+    url = f"https://source.unsplash.com/featured/800x600/?{query}"
+    
+    try:
+        print(f"\nSearching images for '{query}'...")
+        print(f"Opening image for: {query}\n")
+        
+        # Direct image link print kar rahe hain (browser mein khol sakte hain)
+        print(f"Image Link → {url}")
+        print("\n💡 Tip: Is link ko browser mein paste karke image dekh sakte ho.")
+        
+        # Extra: Multiple images ke liye
+        print("\nMultiple Images:")
+        for i in range(1, 5):
+            print(f"Image {i}: https://source.unsplash.com/featured/800x600/?{query}&{i}")
+            
+    except Exception as e:
+        print("Some error occurred:", e)
+
+
+# ==================== Run Program ====================
+if __name__ == "__main__":
+    print("Unsplash Image Search Tool")
+    print("Search any topic and get beautiful images!\n")
+    
+    search_images()                            
