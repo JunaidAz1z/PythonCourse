@@ -299,39 +299,40 @@ import requests
 
 
                                     #Using Unsplash Images
-                            
-import requests
 
-def search_images():
-    query = input("Kya search karna chahte ho? (e.g. mountain, cat, car, nature): ").strip()
+                 #Not working code properly           
+# import requests
+
+# def search_images():
+#     query = input("Kya search karna chahte ho? (e.g. mountain, cat, car, nature): ").strip()
     
-    if not query:
-        print("Please enter something to search!")
-        return
+#     if not query:
+#         print("Please enter something to search!")
+#         return
     
-    # Unsplash ka simple random image search URL
-    url = f"https://source.unsplash.com/featured/800x600/?{query}"
+#     # Unsplash ka simple random image search URL
+#     url = f"https://source.unsplash.com/featured/800x600/?{query}"
     
-    try:
-        print(f"\nSearching images for '{query}'...")
-        print(f"Opening image for: {query}\n")
+#     try:
+#         print(f"\nSearching images for '{query}'...")
+#         print(f"Opening image for: {query}\n")
         
-        # Direct image link print kar rahe hain (browser mein khol sakte hain)
-        print(f"Image Link → {url}")
-        print("\n💡 Tip: Is link ko browser mein paste karke image dekh sakte ho.")
+#         # Direct image link print kar rahe hain (browser mein khol sakte hain)
+#         print(f"Image Link → {url}")
+#         print("\n💡 Tip: Is link ko browser mein paste karke image dekh sakte ho.")
         
-        # Extra: Multiple images ke liye
-        print("\nMultiple Images:")
-        for i in range(1, 5):
-            print(f"Image {i}: https://source.unsplash.com/featured/800x600/?{query}&{i}")
+#         # Extra: Multiple images ke liye
+#         print("\nMultiple Images:")
+#         for i in range(1, 5):
+#             print(f"Image {i}: https://source.unsplash.com/featured/800x600/?{query}&{i}")
             
-    except Exception as e:
-        print("Some error occurred:", e)
+#     except Exception as e:
+#         print("Some error occurred:", e)
 
 
-# ==================== Run Program ====================
-if __name__ == "__main__":
-    print("Unsplash Image Search Tool")
-    print("Search any topic and get beautiful images!\n")
+# # ==================== Run Program ====================
+# if __name__ == "__main__":
+#     print("Unsplash Image Search Tool")
+#     print("Search any topic and get beautiful images!\n")
     
-    search_images()                            
+#     search_images()                            
