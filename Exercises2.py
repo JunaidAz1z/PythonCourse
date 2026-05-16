@@ -264,12 +264,93 @@
 # import asyncio
 # async def say_hello():
 #     print("Hello")
-#     time.sleep(2)
+#     await asyncio.sleep(2)
 #     print("Goodbye!")
 
-# asyncio.run(say_hello)
+# asyncio.run(say_hello())
 
 #Ex2
+
+# import asyncio
+
+# async def make_pizza():
+#     print("Pizza is in oven!")
+#     await asyncio.sleep(3)      
+#     print("Pizza is ready")
+
+# async def make_juice():
+#     print("Juice is making")
+#     await asyncio.sleep(2)
+#     print("Juice is ready")
+
+# async def main():
+#     await asyncio.gather(
+#         make_pizza(),
+#         make_juice()
+#     )
+# asyncio.run(main())
+
+#Ex3
+
+# import asyncio
+# import time 
+# async def get_weather():
+#     print("Weather data is loading...")
+#     await asyncio.sleep(2)
+#     return "Karachi: 32C"
+# async def get_news():
+#     print("News data is loading...")
+#     await asyncio.sleep(3)
+#     return "Pakistan wins"
+# async def gold_price():
+#     print("Gold data is loading...")
+#     await asyncio.sleep(1)
+#     return "Gold: 490000"
+
+# async def main():
+#     start = time.time()
+#     results = await asyncio.gather(
+#         get_weather(),
+#         get_news(),
+#         gold_price()
+#     )
+#     for result in results:
+#         print(result)
+#     end = time.time()
+#     print(f"Total wait {end - start} seconds")
+# asyncio.run(main())
+
+#Ex4
+
+# import asyncio
+# import time
+# def timer(func):
+#     async def wrapper(*args, **kwargs):
+#         start = time.time()
+#         print("download started!")
+#         # file = args[0]
+#         result = await func(*args, **kwargs)
+#         end = time.time()
+#         print(f"Total time {end - start:.2f} seconds")
+#         return result
+#     return wrapper
+
+# @timer
+# async def download(file):
+#     await asyncio.sleep(2)
+#     print(f"{file}downloaded")
+
+# asyncio.run(download("csv."))
+
+                                        #Requests
+
+# import requests
+
+# response = requests.get("https://jsonplaceholder.typicode.com/posts/1")
+# print(response.status_code)
+# data = response.json()
+# print(data["userId"])
+# print(data["title"])
 
 
 
